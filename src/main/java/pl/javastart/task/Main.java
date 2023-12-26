@@ -7,35 +7,34 @@ public class Main {
         drink.name = "Mojito";
         drink.price = 13.0;
         drink.alcohol = true;
-        drink.NameFirstIgredient = "Rum";
-        drink.NameSecondIgredient = "Lemon juice";
-        drink.NameThirdIgredient = "Water";
+
+        Ingredient rum = new Ingredient();
+        rum.name = "Rum";
+        rum.quantity = 100;
+        drink.ingredient1 = rum;
+
+        Ingredient lemonJuice = new Ingredient();
+        lemonJuice.name = "Lemon juice";
+        lemonJuice.quantity = 15;
+        drink.ingredient2 = lemonJuice;
+
+
+        drink.ingredient3.name = "Water";
+        drink.ingredient3.quantity = 25;
 
         System.out.println("Drink:" + drink.name);
         System.out.println("Cena:" + drink.price);
         System.out.println("Czy drink zawiera alkohol? : " + drink.alcohol);
         System.out.println("Składniki:");
-        System.out.println(drink.NameFirstIgredient  +  " 50ml ");
-        System.out.println(drink.NameSecondIgredient  +  " 5ml ");
-        System.out.println(drink.NameThirdIgredient  +  " 25ml ");
+        System.out.println(drink.ingredient1.name + " " + drink.ingredient1.quantity + " ml ");
+        System.out.println(drink.ingredient2.name + " " + drink.ingredient2.quantity + " ml ");
+        System.out.println(drink.ingredient3.name + " " + drink.ingredient3.quantity +  " ml ");
 
 
-        drink.quantity1 = 50;
-        drink.quantity2 = 5;
-        drink.quantity3 = 25;
 
-        int capacitySum = drink.quantity1 + drink.quantity2 + drink.quantity3;
+
+        int capacitySum = drink.ingredient1.quantity + drink.ingredient2.quantity + drink.ingredient3.quantity;
         System.out.println("Pojemność: " + capacitySum + "ml");
-
-
-
-
-
-
-
-
-
-
 
 
     }
